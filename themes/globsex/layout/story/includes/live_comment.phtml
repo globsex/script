@@ -1,0 +1,25 @@
+<div class="live_comments" live_comment_id="<?php echo $wo['comment']['id']; ?>">
+	<a onclick="InjectAPI('{&quot;profile_id&quot; : &quot;1&quot;, &quot;type&quot;:&quot;user&quot;}', event);" class="<?php echo Wo_RightToLeft('pull-left'); ?>" href="<?php echo($wo['comment']['publisher']['url']) ?>">
+		<img class="avatar" src="<?php echo($wo['comment']['publisher']['avatar']) ?>" alt="avatar">
+	</a>
+	<div class="comment-body">
+		<div class="comment-heading">
+			<div class="tag_comm_body">
+				<div>
+					<span>
+						<a href="<?php echo($wo['comment']['publisher']['url']) ?>" data-ajax="?link1=timeline&amp;u=<?php echo($wo['comment']['publisher']['username']) ?>" onclick="InjectAPI('{&quot;profile_id&quot; : &quot;1&quot;, &quot;type&quot;:&quot;user&quot;}', event);">
+							<h4 class="user"><?php echo($wo['comment']['publisher']['name']) ?></h4>
+						</a>
+					</span>
+					<?php  if($wo['comment']['publisher']['verified'] == 1) { ?>
+					<span class="verified-color" data-toggle="tooltip" title="<?php echo $wo['lang']['verified_user'];?>"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 40 40"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill="#2196f3"></path><path d="m385.75 201.75-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0 8.339844 8.339843 8.339844 21.820312 0 30.164062zm0 0" fill="#fff"></path></svg></span>
+					<?php } ?>
+				</div>
+				<div class="valign">
+					<div class="comment-text"><?php echo $wo['comment']['text']; ?></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
