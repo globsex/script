@@ -1,0 +1,11 @@
+# Logs e cache
+error_log
+cache/
+# Uploads de usuários
+upload/
+# Arquivos grandes
+*.zip
+*.mp4
+*.mov
+*.avi
+*.tmp
